@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sensor - Acelerómetro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Datos del Acelerómetro</ion-card-title>
+      <ion-card-subtitle>Plano tridimensional XYZ</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Eje X:</strong> {{ x | number:'1.2-4' }}</p>
+      <p><strong>Eje Y:</strong> {{ y | number:'1.2-4' }}</p>
+      <p><strong>Eje Z:</strong> {{ z | number:'1.2-4' }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <p style="color: gray; font-size: 12px; text-align: center;">
+    En browser los valores quedan en 0. Prueba en emulador Android.
+  </p>
+</ion-content>

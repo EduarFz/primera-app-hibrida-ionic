@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>🏋️ Ejercicios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Mensaje si aún no hay datos -->
+  <div *ngIf="ejercicios.length === 0" class="ion-padding">
+    <p>Cargando ejercicios...</p>
+  </div>
+
+  <!-- Lista de ejercicios -->
+  <ion-list>
+    <ion-item *ngFor="let item of ejercicios">
+      <ion-label>
+        <h2>{{ item.name || 'Sin nombre' }}</h2>
+        <p>ID: {{ item.id }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botón para ir al sensor -->
+  <div class="ion-padding">
+    <ion-button expand="block" routerLink="/sensor">
+      📡 Abrir Sensor
+    </ion-button>
+  </div>
+
+</ion-content>
